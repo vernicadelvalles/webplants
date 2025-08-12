@@ -13,29 +13,50 @@
   <!-- Style -->
   <link rel="stylesheet" href="./assets/css/normalize.css">
   <link rel="stylesheet" href="./assets/css/style-globals.css">
-  <link rel="stylesheet" href="./assets/css/index.css">
+  <link rel="stylesheet" href="./assets/css/header.css">
+
+  <!-- Font Awesome -->
+   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.0/css/all.min.css">
 </head>
 <body>
   <div class="container">
     <header class="header">
       <div class="vertical-center">
-        <div class="content-header">
+        <div class="navigation-bar">
           <div class="brands">
-            <img src="./assets/image/brands/brand-header.png" alt="Logo de plantas">
+            <a href="./index.html" aria-label="Ir al inicio de PLants">
+              <img src="./assets/image/brands/brand-header.png" alt="Logo de mi marca Plants">
+            </a>
           </div>
     
-          <nav class="menu">
-            <a href="#">Inicio</a>
-            <a href="#">¿Quiénes somos?</a>
-            <a href="#">Productos</a>
-            <a href="#">Blog</a>
-            <a href="#">Contactos</a>
-          </nav>
+          <div class="btn-menu-bar" id="btnMenuBar">
+            <button aria-label="Boton de abrir el menu"></button>
+          </div>
+
+          <div class="menu" id="menu">
+            <div class="btn-close" id="btnClose">
+              <button aria-label="Boton de cerrar el menu">x</button>
+            </div>
+
+            <nav class="nav">
+              <a href="#">Inicio</a>
+              <a href="#">¿Quiénes somos?</a>
+              <a href="#">Productos</a>
+              <a href="#">Blog</a>
+              <a href="#">Contactos</a>
+            </nav>
+
+            <div class="image-menu-bar">
+                <img src="./assets/image/bg-menu-bar.png" alt="" >
+            </div>
+          </div>
         </div>
       </div>
     </header>
     <main></main>
     <footer></footer>
   </div>
+
+  <script src="./assets/js/main.js"></script>
 </body>
 </html>

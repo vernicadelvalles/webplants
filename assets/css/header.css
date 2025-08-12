@@ -1,0 +1,170 @@
+/*-------------------------------------
+BARRA DE NAVEGACION
+---------------------------------------*/
+
+.header {
+  width: 100%;
+  height: 7rem;
+  background-color: var(--neutral-white);
+  padding: 0 2rem;
+
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 20;
+
+  @media (width >= 1024px) {
+    & {
+      height: 9rem;
+      padding: 0;
+    }
+  }
+
+  .navigation-bar {/* Barra de navegacion */
+    width: 100%;
+    height: 100%;
+  
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    @media (width >= 1024px) {
+      :is(.btn-menu-bar, .btn-close) {
+        display: none;
+      }
+    }
+
+    .btn-menu-bar button::before {
+      font-family: "Font Awesome 5 free";
+      font-weight: 900;
+      font-size: 2rem;
+    }
+
+    .btn-menu-bar  {/* Boton de menu movil */
+      button::before {
+        content: var(--icon-bar);
+      }
+    }
+
+    .menu {/* Menu movil y desktop */
+      position: fixed;
+      top: 0;
+      left: -100%;
+      z-index: 10;
+    
+      width: 100%;
+      height: 100%;
+      background-color: var(--bg-box-menu); 
+      overflow: hidden;
+      transition: left 1s ease-in-out;
+
+      display: grid;
+      grid-template-rows: 7rem auto 7rem;
+      grid-template-columns: 1fr;
+
+      &.active {
+       left: 0;
+      }
+
+      @media (width >= 1024px) {
+        & {
+          position: static;
+          width: auto;
+          height: auto;
+          overflow: visible;
+          transition: none;
+          background-color: transparent;
+
+          display: unset;
+        }
+      }
+
+      .btn-close {/* Boton de cerrar el menu en movil */
+        display: flex;
+        justify-content: end;
+        align-items: center;
+
+        padding-right: 2rem;
+        border-bottom: var(--border);
+        
+        button {
+          display: block;
+          font-size: 2.5rem;
+          cursor: pointer;
+
+          &:hover {
+            color: var(--primary);
+            font-weight: 700;
+          }
+        }
+    
+    
+        @media (width >= 1024px) {
+          & {
+            display: none;
+          }
+        }
+      }
+
+      .nav {/* Link de navegacion */
+        margin-top: 1rem;
+
+        a {
+          display: block;
+          padding: 1rem 0 1.5rem 2rem;
+          color: var(--neutral-black);
+          font-weight: 700;
+      
+          &:hover {
+            background-color: var(--bg-hover-menu);
+            color: var(--hover-menu-mobile);
+            
+            @media (width >= 1024px) {
+              & {
+                background-color: transparent;
+                color: var(--primary);
+              }
+            }
+          }
+
+          @media (width >= 1024px) {
+            & {
+              padding: 0;
+              display: inline-block;
+
+              margin-right: 2rem;
+              transition: all .2s ease-in-out;
+          
+              &:last-child {
+                margin-right: 0;
+              }
+          
+              &:first-child {
+                color: var(--primary);
+              }
+            }
+          }
+        }
+      }
+
+      .image-menu-bar {/* Imagen de decoracion en dispositivo movil */
+        border-top: var(--border);
+
+        display: flex;
+        justify-content: center;
+        
+        @media (width >= 1024px) {
+          & {
+            display: none;
+          }
+        }
+
+        img {
+          width: 130px;
+          height: 100%;
+          object-fit: cover;
+        }
+      }
+    }
+  }
+}

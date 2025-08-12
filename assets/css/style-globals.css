@@ -8,8 +8,8 @@ ESTILOS GENERALES
 }
 :root {
   /* BRAND COLORS */
-  --primary: hsl(132, 39%, 46%);      /* Green */
-  --brand-accent: hsl(4, 81%, 49%);       /* Red */
+  --primary: hsl(132, 39%, 46%);
+  --brand-accent: hsl(4, 81%, 49%);
 
   /* NEUTRAL COLORS */
   --neutral-white: hsl(0, 0%, 100%);
@@ -17,10 +17,22 @@ ESTILOS GENERALES
   --neutral-gray-light: hsl(0, 0%, 87%);
   --neutral-gray-dark: hsl(0, 0%, 60%);
 
-  /* TYPOGRAPHY SCALE */
-  --font-size-body: clamp(0.95rem, 1vw + 0.5rem, 1.2rem);
-  --font-size-heading-lg: clamp(1.8rem, 2vw + 1rem, 2.5rem);
-  --font-size-heading-xl: clamp(2.5rem, 4vw + 1rem, 4rem);
+  /* BACKGROUND COLORS */
+  --bg-body: hsl(0, 0%, 95%);
+  --bg-box-menu: hsl(105deg 92.93% 75.51%);
+  --bg-hover-menu: rgba(0, 0, 0, 0.075);
+  --hover-menu-mobile: hsl(132deg 100% 34.64%);
+
+  /* icons font awesome */
+  --icon-bar: "\f0c9";
+  --icon-home: "\e3af";
+  --icon-about: "\f0c0";
+  --icon-product: "\f54f"; 
+  --icon-blog: "\f1ea"; 
+  --icon-contacts: "\f0e0";
+
+  /* Border */
+  --border: 1px solid var(--neutral-black);
 
   /* FONT FAMILY */
   --font-primary: 'Roboto', sans-serif;
@@ -53,13 +65,32 @@ a {
   text-decoration: none;
 }
 
-.vertical-center {
-  max-width: 980px;
-  width: 100%;
-  height: 100%;
-  margin-inline: auto;
+button {
+  border: 0;
+  background-color: transparent;
+  cursor: pointer;
 }
 
-.border-red {
+.container {
+  width: 100%;
+  height: 100%;
+  background-color: var(--bg-body);
+
+  position: relative;
+}
+
+.vertical-center {
+  width: 100%;
+  height: 100%;
+
+  @media (width >= 1024px) {
+    & {
+      max-width: 980px;
+      margin-inline: auto;
+    }
+  }
+}
+
+.red {
   border: 1px solid red
 }
