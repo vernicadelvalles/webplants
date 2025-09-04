@@ -14,13 +14,15 @@
   <link rel="stylesheet" href="./assets/css/normalize.css">
   <link rel="stylesheet" href="./assets/css/style-globals.css">
   <link rel="stylesheet" href="./assets/css/header.css">
+  <link rel="stylesheet" href="./assets/css/main/main.css">
+  <link rel="stylesheet" href="./assets/css/footer.css">
 
   <!-- Font Awesome -->
    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.0/css/all.min.css">
 </head>
 <body>
   <div class="container">
-    <header class="header">
+    <header>
       <div class="vertical-center">
         <div class="navigation-bar">
           <div class="brands">
@@ -53,10 +55,71 @@
         </div>
       </div>
     </header>
-    <main></main>
-    <footer></footer>
+
+    <main>
+      <!-- Hero welcome -->
+      <section class="hero">
+        <div class="vertical-center hero-bg-image"> 
+          <div class="hero-flex">
+            <div class="hero-info">
+              <h1>¡Bienvenidos a Plants!</h1>
+              <p>Tienda online de plantas de interior y exterior <span>con despacho <b>a todo Chile.</b></span></p>
+              <div class="container-btn btn-hero">
+                <a href="#productos" aria-label="Botón que direcciona a productos">ver productos</a>
+              </div>
+            </div>
+          </div>
+        </div> 
+      </section> 
+
+      <!-- Featured products -->
+      <section class="products section">
+        <div class="vertical-center container-products separation">
+          <div class="info">
+            <h2>Nuestros productos destacados</h2>
+            <p>Conoce las plantas favoritas de nuestra comunidad</p>
+          </div>
+  
+          <!-- Cards -->
+          <div class="cards" id="cards"></div>
+        </div>
+      </section>
+
+      <!-- BLOG -->
+      <section class="blog section">
+        <div class="vertical-center container-blog separatio">
+          <div class="blog-img">
+            <img src="./assets/image/blog.jpg" alt="Mujer rociando plantas con un pulverizador" loading="lazy">
+          </div> 
+
+          <div class="blog-info">
+            <h2>Revisa nuestro blog</h2>
+            <p>Las plantas de interior son gran complemento para cualquier hogar. Ayudan a crear un ambiente más acogedor, mejoran el estado de animo y reducen el estrés. Descubre algunos consejos para cuidar tus plantas de interior favoritas.</p>
+            
+            <div class="container-btn btn-blog">
+              <a href="#blog" aria-label="Botón que direcciona a nuestro blog">
+                ver blog
+              </a>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="subscribe">
+        <div class="container-subscribe">
+          <h2>¡Obtén consejos y ofertas exclusivas!</h2>
+          <p>Suscríbete y sé el primero en recibir todas nuestras novedades</p>
+          <div class="container-btn btn-subscribe">
+            <a href="#productos" aria-label="Botón que direcciona a productos">suscribete ahora</a>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer>footer</footer>
   </div>
 
   <script src="./assets/js/main.js"></script>
+  <script src="./assets/js/cards.js"></script>
 </body>
 </html>

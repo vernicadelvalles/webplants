@@ -1,0 +1,48 @@
+{
+  "products": [
+    {
+      "id": 1,
+      "name": "Calathea roseopicta",
+      "image": "./assets/image/products/calathea-roseopicta.jpg",
+      "alt": "Planta Calathea roseopicta de hojas verdes con bordes morados",
+      "discount": 30,
+      "price": {
+        "current": 10500,
+        "previous": 15000
+      }
+    },
+    {
+      "id": 2,
+      "name": "Clusia",
+      "image": "./assets/image/products/clusia.jpg",
+      "alt": "Planta Clusia de hojas verdes gruesas y brillantes",
+      "discount": null,
+      "price": {
+        "current": 9000,
+        "previous": null
+      }
+    },
+    {
+      "id": 3,
+      "name": "Sansevieria",
+      "image": "./assets/image/products/sansevieria.jpg",
+      "alt": "Planta Sansevieria de hojas largas, rígidas y puntiagudas en forma vertical",
+      "discount": 25,
+      "price": {
+        "current": 12750,
+        "previous": 17000
+      }
+    },
+    {
+      "id": 4,
+      "name": "Jade",
+      "image": "./assets/image/products/jade.jpg",
+      "alt": "Planta Jade de hojas carnosas, verdes y ovaladas",
+      "discount": null,
+      "price": {
+        "current": 7000,
+        "previous": null
+      }
+    }
+  ]
+}

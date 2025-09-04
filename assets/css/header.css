@@ -2,25 +2,23 @@
 BARRA DE NAVEGACION
 ---------------------------------------*/
 
-.header {
+header {
   width: 100%;
-  height: 7rem;
   background-color: var(--neutral-white);
   padding: 0 2rem;
-
-  position: fixed;
+  
+  position: sticky;
   top: 0;
   left: 0;
   z-index: 20;
 
   @media (width >= 1024px) {
     & {
-      height: 9rem;
       padding: 0;
     }
   }
 
-  .navigation-bar {/* Barra de navegacion */
+  .navigation-bar {
     width: 100%;
     height: 100%;
   
@@ -37,16 +35,16 @@ BARRA DE NAVEGACION
     .btn-menu-bar button::before {
       font-family: "Font Awesome 5 free";
       font-weight: 900;
-      font-size: 2rem;
+      font-size: 2.5rem;
     }
 
-    .btn-menu-bar  {/* Boton de menu movil */
+    .btn-menu-bar  {
       button::before {
         content: var(--icon-bar);
       }
     }
 
-    .menu {/* Menu movil y desktop */
+    .menu {
       position: fixed;
       top: 0;
       left: -100%;
@@ -79,7 +77,7 @@ BARRA DE NAVEGACION
         }
       }
 
-      .btn-close {/* Boton de cerrar el menu en movil */
+      .btn-close {
         display: flex;
         justify-content: end;
         align-items: center;
@@ -106,7 +104,7 @@ BARRA DE NAVEGACION
         }
       }
 
-      .nav {/* Link de navegacion */
+      .nav {
         margin-top: 1rem;
 
         a {
@@ -147,7 +145,7 @@ BARRA DE NAVEGACION
         }
       }
 
-      .image-menu-bar {/* Imagen de decoracion en dispositivo movil */
+      .image-menu-bar {
         border-top: var(--border);
 
         display: flex;

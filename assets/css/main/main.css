@@ -1,0 +1,12 @@
+@import url("./hero.css");
+@import url("./products.css");
+@import url("./blog.css");
+@import url("./subscribe.css");
+
+main {
+  width: 100%;
+  
+  .section {
+    margin: 5rem 0;
+  }
+}

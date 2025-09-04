@@ -1,0 +1,26 @@
+.subscribe {
+  width: 100%;
+  height: 45rem;
+  background: var(--bg-subscribe);
+  border-top: 1px solid var(--neutral-gray-light);
+
+  display: grid;
+  place-items: center;
+
+  .container-subscribe {
+    text-align: center;
+
+    h2 {
+      font-size: 5rem;
+    }
+
+    p {
+      margin: 1rem 0 3rem 0;
+    }
+
+    .btn-subscribe {
+      width: 30rem;
+      margin: 0 auto;
+    }
+  }
+}
