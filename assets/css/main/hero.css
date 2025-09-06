@@ -1,15 +1,24 @@
 .hero {
-  height: clamp(35rem, 5vw + 35rem, 38rem);
+  height: calc(100dvh - 7rem);
+  /*  */
   background-color: var(--bg-hero);
 
   .hero-bg-image {
     height: 100%;
     background: var(--hero-bg-mobile);
     background-size: auto 100%;
+    background-position: right 50% center;
 
-    @media (width >=768px) {
+    @media (width >= 640px) {
       & {
         background: var(--hero-bg-desktop);
+        background-position: center center;
+      }
+    }
+
+    @media (width: 768px) {
+      & {
+        /* height: calc(100vh - 7rem); */
       }
     }
 
@@ -36,7 +45,14 @@
         width: 90%;
         text-align: center;
 
-        @media (width >= 768px) {
+        @media (min-width: 640px) {
+          & {
+            width: 100%;
+            text-align: left;
+          }
+        }
+
+        @media (width >=768px) {
           & {
             width: 100%;
             text-align: left;
@@ -45,15 +61,15 @@
 
         h1 {
           margin: 0;
-          font-size: clamp(4rem, 5vw, 5.5rem);
-          line-height: 1.3;
+          font-size: clamp(4.5rem, 5vw, 5.5rem);
+          /* line-height: 1.3; */
         }
 
         p {
           margin: 1rem 0 3rem 0;
-          font-size: 1.5rem;
+          font-size: 1.4rem;
 
-          @media (width >=768px) {
+          @media (min-width: 768px) {
             & {
               font-size: 1.6rem;
             }
@@ -65,7 +81,22 @@
         }
 
         .btn-hero {
-          width: 23rem;
+          width: 18rem;
+          margin-inline: auto;
+
+          @media (min-width: 640px) {
+            & {
+              margin: 0;
+              width: 23rem;
+            }
+          }
+
+          @media (min-width: 768px) {
+            & {
+              margin: 0;
+              width: 23rem;
+            }
+          }
         }
       }
     }

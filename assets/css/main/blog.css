@@ -15,8 +15,6 @@
 
   .container-blog {
     height: 100%;
-    /* border-bottom: var(--border-separation);
-    padding-bottom: 5rem; */
 
     @media (min-width: 768px) {
       & {
@@ -47,6 +45,10 @@
           flex-direction: column;
           justify-content: center;
         }
+      }
+
+      h2 {
+        font-size: clamp(2.5rem, 5vw, 3rem);
       }
 
       p {
