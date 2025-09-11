@@ -38,7 +38,7 @@ ESTILOS GENERALES
 
   /* Baclground images */
   --hero-url-mobile: url("../../image/hero/hero-mobile.png");
-  --hero-url-desktop: url("../../image/hero/plants.png");
+  --hero-url-desktop: url("../../image/hero/hero-desktop.png");
   --url-subscribe: url("../../image/bg_blog.jpg");
 
   --hero-bg-mobile: var(--bg-hero) var(--hero-url-mobile) no-repeat right center;
