@@ -1,6 +1,4 @@
 .products {
-  padding: 0 2rem;
-
   .container-products {
     .info {
       text-align: center;
@@ -8,6 +6,7 @@
   
     .cards {
       margin-top: 5rem;
+      
       display: grid;
       gap: 2rem;
       grid-template-columns: 1fr;

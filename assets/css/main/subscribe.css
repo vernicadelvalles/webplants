@@ -13,30 +13,19 @@
     }
   }
 
-  /* @media(min-width: 768px) {
-
-  }
-
-  @media(min-width: 1024px) {
-
-  }
-
-  @media(min-width: 1280px) {
-
-  } */
-
   .container-subscribe {
     padding: 0 2rem;
     text-align: center;
 
-    @media (min-width: 768px) {
+    @media (min-width: 1024px) {
       & {
         padding: 0;
       }
     }
     
     h2 {
-      font-size: clamp(2.5rem, 5vw, 5rem);
+      font-size: clamp(3rem, 5vw, 5rem);
+      line-height: 1.2;
 
       @media (min-width: 768px) {
         & {
@@ -46,7 +35,14 @@
     }
 
     p {
+      font-size: 1.4rem;
       margin: 1rem 0 3rem 0;
+
+      @media (min-width: 768px) {
+        & {
+          font-size: 1.6rem;
+        }
+      }
     }
 
     .btn-subscribe {

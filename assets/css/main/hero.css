@@ -1,68 +1,48 @@
 .hero {
-  height: calc(100dvh - 7rem);
-  /*  */
+  height: 35rem;
   background-color: var(--bg-hero);
 
-  .hero-bg-image {
+  @media (min-width: 768px) {
+    & {
+      height: 47rem;
+    }
+  }
+
+  .hero-container {
+    width: 100%;
     height: 100%;
     background: var(--hero-bg-mobile);
     background-size: auto 100%;
-    background-position: right 50% center;
 
-    @media (width >= 640px) {
+    position: relative;
+
+    @media (min-width: 768px) {
       & {
         background: var(--hero-bg-desktop);
-        background-position: center center;
+        background-size: 40%;
       }
     }
 
-    @media (width: 768px) {
-      & {
-        /* height: calc(100vh - 7rem); */
-      }
-    }
-
-    .hero-flex {
+    .hero-container-info {
+      width: 100%;
       height: 100%;
-      padding: 0 2rem;
+      text-align: center;
 
       display: flex;
       align-items: center;
 
-      @media (width >=768px) {
+      @media (min-width: 500px) {
         & {
-          height: 100%;
+          width: 75%;
+          text-align: left;
         }
       }
 
-      @media (width >=1024px) {
-        & {
-          padding: 0;
-        }
-      }
-
-      .hero-info {
-        width: 90%;
-        text-align: center;
-
-        @media (min-width: 640px) {
-          & {
-            width: 100%;
-            text-align: left;
-          }
-        }
-
-        @media (width >=768px) {
-          & {
-            width: 100%;
-            text-align: left;
-          }
-        }
-
+      & > div {
         h1 {
           margin: 0;
           font-size: clamp(4.5rem, 5vw, 5.5rem);
-          /* line-height: 1.3; */
+          line-height: 1.2;
         }
 
         p {
@@ -84,14 +64,7 @@
           width: 18rem;
           margin-inline: auto;
 
-          @media (min-width: 640px) {
-            & {
-              margin: 0;
-              width: 23rem;
-            }
-          }
-
-          @media (min-width: 768px) {
+          @media (min-width: 500px) {
             & {
               margin: 0;
               width: 23rem;

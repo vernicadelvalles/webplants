@@ -21,7 +21,7 @@ ESTILOS GENERALES
   --bg-body: hsl(0, 0%, 95%);
   --bg-box-menu: hsl(105deg 92.93% 75.51%);
   --bg-hover-menu: rgba(0, 0, 0, 0.075);
-  --bg-hero: hsl(0, 0%, 96%);
+  --bg-hero: hsl(240, 9%, 96%);
   --hover-menu-mobile: hsl(132deg 100% 34.64%);
 
   /* icons font awesome */
@@ -38,11 +38,11 @@ ESTILOS GENERALES
 
   /* Baclground images */
   --hero-url-mobile: url("../../image/hero/hero-mobile.png");
-  --hero-url-desktop: url("../../image/hero/hero-desktop.png");
+  --hero-url-desktop: url("../../image/hero/plants.png");
+  --url-subscribe: url("../../image/bg_blog.jpg");
+
   --hero-bg-mobile: var(--bg-hero) var(--hero-url-mobile) no-repeat right center;
   --hero-bg-desktop: var(--bg-hero) var(--hero-url-desktop) no-repeat right center;
-
-  --url-subscribe: url("../../image/bg_blog.jpg");
   --bg-subscribe: var(--bg-hero) var(--url-subscribe) center;
 
   /* FONT FAMILY */
@@ -69,17 +69,12 @@ body{
 
 h1, h2 {
   font-family: var(--font-heading);
-  /* font-family: var(--font-primary); */
   font-weight: 700;
-  line-height: 1.2;
-}
+} 
 
 h2 {
-  /* font-family: var(--font-primary); */
-  font-size: 3rem;
+  font-size: clamp(2.5rem, 5vw, 3rem);
 }
-
-
 
 h4 {
   margin-bottom: .5rem;
@@ -98,12 +93,10 @@ button {
 img {
   width: 100%;
   height: 100%;
-  object-fit: cover;
+  object-fit: cover; 
 }
 
 .container {
-  height: 100vh;
-  
   display: grid;
   grid-template-rows: 7rem auto 20rem;
 
@@ -120,6 +113,7 @@ img {
 .vertical-center {
   width: 100%;
   height: 100%;
+  padding: 0 2rem;
 
   @media (width >= 1024px) {
     & {
