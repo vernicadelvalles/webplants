@@ -29,3 +29,10 @@ window.addEventListener('scroll', () => {
     header.classList.remove('shadow');
   }
 });
+
+const spanYear = document.getElementById('spanYear');
+const newDate = new Date();
+const year = newDate.getFullYear();
+spanYear.textContent = year;
+
+

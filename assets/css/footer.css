@@ -1,3 +1,131 @@
 footer {
-  background-color: #252525;
+  background-color: var(--neutral-black);
+
+  .container-footer {
+    /* padding: 3rem 0 5rem 0; */
+    padding: 2rem;
+    height: 100%;
+
+    .brands {
+      padding-bottom: 2rem;
+      border-bottom: var(--border-separation);
+      margin-bottom: 3rem;
+
+      display: flex;
+      justify-content: center;
+
+      @media (min-width: 768px) {
+        & {
+          display: block;
+        }
+      }
+
+      a {
+        display: block;
+        height: 100%;
+
+        @media (min-width: 768px) {
+          img {
+            width: 18rem; 
+          }
+        }
+      }
+
+    }
+
+    .footer-info {
+      display: grid;
+      grid-template-columns: 1fr;
+
+      @media (min-width: 768px) {
+        & {
+          grid-template-columns: 70% 30%;
+        }
+      }
+      
+      .info-links {
+        .links {
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+          gap: 1rem;
+
+          @media (min-width: 768px) {
+            & {
+              display: block;
+            }
+          }
+
+          a {
+            color: var(--neutral-white);
+            font-weight: 700;
+            font-size: 1.3rem;
+
+            @media (min-width: 768px) {
+              &::after {
+                content: "|";
+                margin-left: .5rem;
+              }
+            }
+          }
+        }
+
+        .info-copry {
+          margin: 2rem 0;
+          
+          @media (min-width: 768px) {
+            & {
+              margin: 0;
+              margin-top: .5rem;
+            }
+          }
+
+          p {
+            color: var(--neutral-white);
+            opacity: .5;
+            font-size: 1.4rem;
+            text-align: center;
+
+            @media (min-width: 768px) {
+              & {
+                text-align: left;
+              }
+            }
+
+            span {
+              margin-right: .5rem;
+            }
+
+            a {
+              margin-left: .5rem;
+              color: rgb(154, 254, 5);
+              font-weight: 700;
+              opacity: 1;
+            }
+          }
+        }
+      }
+
+      .social-networks {
+        .list-icons {
+          list-style: none;
+
+          display: flex;
+          justify-content: center;
+          gap: 1.5rem;
+          
+          li {
+            a {
+              color: white;
+              opacity: .5;
+
+              &:hover {
+                color: var(--primary);
+              }
+            }
+          }
+        }
+      }
+    }
+  }
 }

@@ -24,14 +24,6 @@ ESTILOS GENERALES
   --bg-hero: hsl(240, 9%, 96%);
   --hover-menu-mobile: hsl(132deg 100% 34.64%);
 
-  /* icons font awesome */
-  --icon-bar: "\f0c9";
-  --icon-home: "\e3af";
-  --icon-about: "\f0c0";
-  --icon-product: "\f54f"; 
-  --icon-blog: "\f1ea"; 
-  --icon-contacts: "\f0e0";
-
   /* Border */
   --border: 1px solid var(--neutral-black);
   --border-separation: 1px solid var(--neutral-gray-light);
@@ -82,6 +74,7 @@ h4 {
 
 a {
   text-decoration: none;
+  cursor: pointer;
 }
 
 button {
@@ -98,12 +91,29 @@ img {
 
 .container {
   display: grid;
-  grid-template-rows: 7rem auto 20rem;
+  grid-template-rows: 7rem auto auto;
 
   width: 100%;
   background-color: var(--neutral-white);
 
   position: relative;
+}
+
+/*--------------------------------
+  BOTON DE ARRIBA
+--------------------------------*/
+
+.back-to-top {
+  position: fixed;
+  bottom: 5rem;
+  right: 2rem;
+  z-index: 30;
+
+  button {
+    display: block;
+    font-size: 4rem;
+    color: var(--primary);
+  }
 }
 
 /*--------------------------------
@@ -117,6 +127,7 @@ img {
 
   @media (width >= 1024px) {
     & {
+      padding: 0;
       max-width: 900px;
       margin-inline: auto;
     }
@@ -151,21 +162,4 @@ img {
     font-weight: bold;
     text-transform: uppercase;
   }
-}
-
-.separation {
-  padding-bottom: 5rem;
-  border-bottom: 1px solid var(--neutral-gray-light);
-}
-
-.red {
-  border: 1px solid red;
-}
-
-.blue {
-  border: 1px solid blue;
-}
-
-.green {
-  border: 1px solid green;
 }

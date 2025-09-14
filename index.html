@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -18,10 +19,15 @@
   <link rel="stylesheet" href="./assets/css/footer.css">
 
   <!-- Font Awesome -->
-   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.0/css/all.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.0/css/all.min.css">
 </head>
+
 <body>
   <div class="container">
+    <div class="back-to-top">
+      <button class="fa-solid fa-circle-chevron-up" id="backToTop" aria-label="Volver arriba" title="Volver arriba"></button>
+    </div>
+
     <header>
       <div class="vertical-center">
         <div class="navigation-bar">
@@ -30,7 +36,7 @@
               <img src="./assets/image/brands/brand-header.png" alt="Logo de mi marca Plants">
             </a>
           </div>
-    
+
           <div class="btn-menu-bar" id="btnMenuBar">
             <button aria-label="Boton de abrir el menu"></button>
           </div>
@@ -49,7 +55,7 @@
             </nav>
 
             <div class="image-menu-bar">
-                <img src="./assets/image/bg-menu-bar.png" alt="" >
+              <img src="./assets/image/bg-menu-bar.png" alt="">
             </div>
           </div>
         </div>
@@ -68,18 +74,18 @@
                 <a href="#productos" aria-label="Botón que direcciona a productos">ver productos</a>
               </div>
             </div>
-          </div> 
-        </div> 
-      </section> 
+          </div>
+        </div>
+      </section>
 
       <!-- Featured products -->
       <section class="products section">
-        <div class="vertical-center container-products separation">
+        <div class="vertical-center container-products">
           <div class="info">
             <h2>Nuestros productos destacados</h2>
             <p>Conoce las plantas favoritas de nuestra comunidad</p>
           </div>
-  
+
           <!-- Cards -->
           <div class="cards" id="cards"></div>
         </div>
@@ -90,12 +96,14 @@
         <div class="vertical-center container-blog separatio">
           <div class="blog-img">
             <img src="./assets/image/blog.jpg" alt="Mujer rociando plantas con un pulverizador" loading="lazy">
-          </div> 
+          </div>
 
           <div class="blog-info">
             <h2>Revisa nuestro blog</h2>
-            <p>Las plantas de interior son gran complemento para cualquier hogar. Ayudan a crear un ambiente más acogedor, mejoran el estado de animo y reducen el estrés. Descubre algunos consejos para cuidar tus plantas de interior favoritas.</p>
-            
+            <p>Las plantas de interior son gran complemento para cualquier hogar. Ayudan a crear un ambiente más
+              acogedor, mejoran el estado de animo y reducen el estrés. Descubre algunos consejos para cuidar tus
+              plantas de interior favoritas.</p>
+
             <div class="container-btn btn-blog">
               <a href="#blog" aria-label="Botón que direcciona a nuestro blog">
                 ver blog
@@ -116,10 +124,71 @@
       </section>
     </main>
 
-    <footer>footer</footer>
+    <footer>
+      <div class="vertical-center container-footer">
+        <div class="brands">
+          <a href="./index.html" aria-label="Ir al inicio de PLants">
+            <img src="./assets/image/brands/brand-footer.png" alt="Logo de mi marca Plants" width="180">
+          </a>
+        </div>
+
+        <div class="footer-info">
+          <div class="info-links">
+            <div class="links">
+              <a href="#" aria-label="Ir al mapa del sitio">Mapa del sitio</a>
+              <a href="#" aria-label="Leer términos y condiciones">Términos y condiciones</a>
+              <a href="#" aria-label="Ver preguntas frecuentes">Preguntas frecuentes</a>
+              <a href="#" aria-label="Contactar con nosotros">Contactos</a>
+            </div>
+
+            <div class="info-copry">
+              <p>
+                &copy; <span id="spanYear"></span><strong>Plants</strong>. Todos los derechos reservados. Página desarrollada por
+                <a href="https://www.linkedin.com/in/veronica-del-valle-072278326/" target="_blank" rel="noopener noreferrer" aria-label="Ver perfil de LinkedIn de la desarrolladora de la página, Veronica Del Valle">
+                  Veronica Del Valle
+                </a>
+              </p>
+            </div>
+          </div>
+
+          <div class="social-networks">
+            <ul class="list-icons">
+              <li>
+                <a class="facebook" href="https://www.facebook.com" target="_blank" aria-label="Síguenos en Facebook"
+                  title="Síguenos en Facebook">
+                  <i class="fa-brands fa-facebook-f"></i>
+                </a>
+              </li>
+
+              <li>
+                <a class="instagram" href="https://www.instagram.com" target="_blank" aria-label="Síguenos en Instagram"
+                  title="Síguenos en Instagram">
+                  <i class="fa-brands fa-instagram"></i>
+                </a>
+              </li>
+
+              <li>
+                <a class="tiktok" href="https://www.tiktok.com" target="_blank" aria-label="Síguenos en TikTok"
+                  title="Síguenos en TikTok">
+                  <i class="fa-brands fa-tiktok"></i>
+                </a>
+              </li>
+
+              <li>
+                <a class="whatsapp" href="https://wa.me/5491112345678" target="_blank"
+                  aria-label="Escríbenos por WhatsApp" title="Escríbenos por WhatsApp">
+                  <i class="fa-brands fa-whatsapp"></i>
+                </a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </footer>
   </div>
 
   <script src="./assets/js/main.js"></script>
   <script src="./assets/js/cards.js"></script>
 </body>
+
 </html>
