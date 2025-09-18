@@ -1,0 +1,109 @@
+@import "../css/base/normalize.css";
+@import "../css/base/variables.css";
+@import "../css/base/globals.css";
+@import "../css/layout/header.css";
+@import "../css/layout/main.css";
+@import "../css/layout/footer.css";
+
+.container {
+  display: grid;
+  grid-template-rows: 7rem auto auto;
+
+  width: 100%;
+  background-color: var(--neutral-white);
+
+  position: relative;
+  
+  /*--------------------------------
+    BOTON DE ARRIBA
+  --------------------------------*/
+  
+  .btn-back-to-top {
+    width: 4.5rem;
+    height: 4.5rem;
+    background-color: var(--primary);
+    border-radius: .5rem;
+    opacity: 0;
+    transition: opacity .3s ease;
+  
+    position: fixed;
+    bottom: 2rem;
+    right: 2rem;
+  
+    button {
+      width: 100%;
+      height: 100%;
+      font-size: 2rem;
+      color: var(--neutral-white);
+      text-align: center;
+    }
+  }
+  
+  .visible {
+    opacity: 1;
+    transform: translateY(-5px);
+    animation: softFlash 0.5s ease;
+  }
+  
+  @keyframes softFlash {
+    0%   { opacity: 0; transform: translateY(0); }
+    50%  { opacity: 1; transform: translateY(-8px); }
+    100% { opacity: 1; transform: translateY(-5px); }
+  }
+}
+
+/*--------------------------------
+  CENTRAR VERTICALMENTE EL DISEÑO
+--------------------------------*/
+
+.vertical-center {
+  width: 100%;
+  height: 100%;
+  padding-left: 2rem;
+  padding-right: 2rem;
+
+  @media (width >= 1024px) {
+    padding-left: 0;
+    padding-right: 0;
+    max-width: 900px;
+    margin-inline: auto;
+  }
+
+  @media (width >= 1200px) {
+    max-width: 1000px;
+  }
+}
+
+.section {
+  margin: 5rem 0;
+}
+
+/*----------
+  BOTONES
+-----------*/
+
+.btn-section {
+  background-color: var(--primary);
+  transition: background-color 0.3s ease;
+
+   &:hover {
+    background-color: transparent;
+  }
+  
+  a {
+    display: inline-block;
+    width: 100%;
+    padding: 1.5rem 0;
+    color: var(--neutral-white);
+    font-size: 1.3rem;
+    text-align: center;
+    font-weight: bold;
+    text-transform: uppercase;
+    border: 2px solid transparent;
+
+    &:hover {
+      color: var(--primary);
+      border: 2px solid var(--primary);
+    }
+  }
+}

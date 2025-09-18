@@ -4,120 +4,125 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>PLants | Tienda online</title>
 
-  <!-- Fonts -->
+  <!-- Primary Meta Tags -->
+  <title>PLants | Tienda Online de Plantas y Jardinería - Envío Gratis</title>
+  <meta name="description"
+    content="Descubre la mejor selección de plantas para interior y exterior en PLants. Macetas, sustratos y todo para tu jardín. Envío rápido y gratuito a todo el país.">
+  <meta name="author" content="Veronica Del Valle">
+  <meta name="robots" content="index, follow">
+
+  <!-- Canonical -->
+  <link rel="canonical" href="https://www.tu-dominio.com/">
+
+  <!-- Open Graph -->
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="PLants | Tienda Online de Plantas y Jardinería">
+  <meta property="og:description"
+    content="Página de muestra de una tienda online de plantas y jardinería. Proyecto creado como ejemplo de desarrollo web.">
+  <meta property="og:url" content="https://www.tu-dominio.com/">
+  <meta property="og:image" content="https://www.tu-dominio.com/assets/image/blog.jpg">
+
+  <!-- Favicon -->
+  <link rel="shortcut icon" href="./assets/image/favicon.ico" type="image/x-icon">
+
+  <!-- Google Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
 
-  <!-- Style -->
-  <link rel="stylesheet" href="./assets/css/normalize.css">
-  <link rel="stylesheet" href="./assets/css/style-globals.css">
-  <link rel="stylesheet" href="./assets/css/header.css">
-  <link rel="stylesheet" href="./assets/css/main/main.css">
-  <link rel="stylesheet" href="./assets/css/footer.css">
-
   <!-- Font Awesome -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.0/css/all.min.css">
+
+  <!-- Styles -->
+  <link rel="stylesheet" href="./assets/css/style.css">
+
+  <!-- Schema.org JSON-LD -->
+  <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "WebSite",
+      "name": "PLants",
+      "url": "https://www.tu-dominio.com",
+      "description": "Tienda online de muestra especializada en plantas de interior y exterior, macetas y accesorios de jardinería"
+    }
+</script>
 </head>
 
 <body>
   <div class="container">
-    <div class="back-to-top">
-      <button class="fa-solid fa-circle-chevron-up" id="backToTop" aria-label="Volver arriba" title="Volver arriba"></button>
+    <div class="btn-back-to-top" id="btnBackToTop">
+      <button class="fa-solid fa-chevron-up" aria-label="Volver arriba"></button>
     </div>
 
     <header>
-      <div class="vertical-center">
-        <div class="navigation-bar">
-          <div class="brands">
-            <a href="./index.html" aria-label="Ir al inicio de PLants">
-              <img src="./assets/image/brands/brand-header.png" alt="Logo de mi marca Plants">
-            </a>
+      <div class="vertical-center navigation-bar">
+        <div class="brands">
+          <a href="./index.html" aria-label="Ir al inicio de PLants">
+            <img src="./assets/image/brands/brand-header.png" alt="Logo de mi marca Plants">
+          </a>
+        </div>
+
+        <div class="btn-menu-bar" id="btnMenuBar">
+          <button class="fa-solid fa-bars" aria-label="Boton de abrir el menu"></button>
+        </div>
+
+        <div class="menu" id="menu">
+          <div class="btn-close" id="btnClose">
+            <button class="fa-solid fa-xmark" aria-label="Boton de cerrar el menu"></button>
           </div>
 
-          <div class="btn-menu-bar" id="btnMenuBar">
-            <button aria-label="Boton de abrir el menu"></button>
-          </div>
-
-          <div class="menu" id="menu">
-            <div class="btn-close" id="btnClose">
-              <button aria-label="Boton de cerrar el menu">x</button>
-            </div>
-
-            <nav class="nav">
-              <a href="#">Inicio</a>
-              <a href="#">¿Quiénes somos?</a>
-              <a href="#">Productos</a>
-              <a href="#">Blog</a>
-              <a href="#">Contactos</a>
-            </nav>
-
-            <div class="image-menu-bar">
-              <img src="./assets/image/bg-menu-bar.png" alt="">
-            </div>
-          </div>
+          <nav class="nav">
+            <a href="#">Inicio</a>
+            <a href="#">¿Quiénes somos?</a>
+            <a href="#">Productos</a>
+            <a href="#">Blog</a>
+            <a href="#">Contactos</a>
+          </nav>
         </div>
       </div>
     </header>
 
     <main>
-      <!-- Hero welcome -->
+      <!-- Hero -->
       <section class="hero">
         <div class="vertical-center hero-container">
-          <div class="hero-container-info">
-            <div class="hero-info">
-              <h1>¡Bienvenidos a Plants!</h1>
-              <p>Tienda online de plantas de interior y exterior <span>con despacho <b>a todo Chile.</b></span></p>
-              <div class="container-btn btn-hero">
-                <a href="#productos" aria-label="Botón que direcciona a productos">ver productos</a>
-              </div>
+          <div class="hero-info">
+            <h1>¡Bienvenidos a Plants!</h1>
+            <p>Tienda online de plantas de interior y exterior <span>con despacho <b>a todo Chile.</b></span></p>
+
+            <div class="btn-section btn-hero">
+              <a href="#productos" aria-label="Botón que direcciona a productos">ver productos</a>
             </div>
           </div>
         </div>
       </section>
 
-      <!-- Featured products -->
-      <section class="products section">
+      <!-- products -->
+      <section class="section">
         <div class="vertical-center container-products">
-          <div class="info">
+          <div class="products-info">
             <h2>Nuestros productos destacados</h2>
             <p>Conoce las plantas favoritas de nuestra comunidad</p>
           </div>
 
           <!-- Cards -->
-          <div class="cards" id="cards"></div>
+          <div class="products-cards" id="productsCards"></div>
         </div>
       </section>
 
       <!-- BLOG -->
-      <section class="blog section">
-        <div class="vertical-center container-blog separatio">
-          <div class="blog-img">
-            <img src="./assets/image/blog.jpg" alt="Mujer rociando plantas con un pulverizador" loading="lazy">
-          </div>
-
-          <div class="blog-info">
-            <h2>Revisa nuestro blog</h2>
-            <p>Las plantas de interior son gran complemento para cualquier hogar. Ayudan a crear un ambiente más
-              acogedor, mejoran el estado de animo y reducen el estrés. Descubre algunos consejos para cuidar tus
-              plantas de interior favoritas.</p>
-
-            <div class="container-btn btn-blog">
-              <a href="#blog" aria-label="Botón que direcciona a nuestro blog">
-                ver blog
-              </a>
-            </div>
-          </div>
-        </div>
+      <section class="section section-blog">
+        <div class="vertical-center blogs" id="blogs"></div>
       </section>
 
-      <section class="subscribe">
+      <!-- Suscribe -->
+      <section class="section subscribe">
         <div class="container-subscribe">
           <h2>¡Obtén consejos y ofertas exclusivas!</h2>
           <p>Suscríbete y sé el primero en recibir todas nuestras novedades</p>
-          <div class="container-btn btn-subscribe">
+
+          <div class="btn-section btn-subscribe">
             <a href="#productos" aria-label="Botón que direcciona a productos">suscribete ahora</a>
           </div>
         </div>
@@ -128,7 +133,7 @@
       <div class="vertical-center container-footer">
         <div class="brands">
           <a href="./index.html" aria-label="Ir al inicio de PLants">
-            <img src="./assets/image/brands/brand-footer.png" alt="Logo de mi marca Plants" width="180">
+            <img src="./assets/image/brands/brand-footer.png" alt="Logo de mi marca Plants" width="100">
           </a>
         </div>
 
@@ -143,8 +148,11 @@
 
             <div class="info-copry">
               <p>
-                &copy; <span id="spanYear"></span><strong>Plants</strong>. Todos los derechos reservados. Página desarrollada por
-                <a href="https://www.linkedin.com/in/veronica-del-valle-072278326/" target="_blank" rel="noopener noreferrer" aria-label="Ver perfil de LinkedIn de la desarrolladora de la página, Veronica Del Valle">
+                &copy; <span id="spanYear"></span><strong>Plants</strong>. Todos los derechos reservados. Página
+                desarrollada por
+                <a href="https://www.linkedin.com/in/veronica-del-valle-072278326/" target="_blank"
+                  rel="noopener noreferrer"
+                  aria-label="Ver perfil de LinkedIn de la desarrolladora de la página, Veronica Del Valle">
                   Veronica Del Valle
                 </a>
               </p>
@@ -187,8 +195,7 @@
     </footer>
   </div>
 
-  <script src="./assets/js/main.js"></script>
-  <script src="./assets/js/cards.js"></script>
+  <script type="module" src="./assets/js/main.js"></script>
 </body>
 
 </html>

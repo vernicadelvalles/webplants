@@ -1,0 +1,35 @@
+:root {
+  /* BRAND COLORS */
+  --primary: #48a35a;
+  --brand-accent: hsl(4, 81%, 49%);
+
+  /* NEUTRAL COLORS */
+  --neutral-white: hsl(0, 0%, 100%);
+  --neutral-black: hsl(0, 0%, 15%);
+  --neutral-gray-light: hsl(0, 0%, 87%);
+  --neutral-gray-dark: hsl(0, 0%, 60%);
+  --neutral-green-yellow: hsl(84, 100%, 59%);
+
+  /* BACKGROUND COLORS */
+  --bg-body: hsl(0, 0%, 95%);
+  --bg-hover-menu: rgba(0, 0, 0, .25);
+  --bg-hero: hsl(240, 9%, 96%);
+  --hover-menu-mobile: hsl(132deg 100% 34.64%);
+
+  /* Border */
+  --border: 1px solid var(--neutral-black);
+  --border-separation: 1px solid var(--neutral-gray-light);
+
+  /* Baclground images */
+  --hero-url-mobile: url("../../../assets/image/hero/hero-mobile.png");
+  --hero-url-desktop: url("../../../assets/image/hero/hero-desktop.png");
+  --url-subscribe: url("../../../assets/image/bg_blog.jpg");
+
+  --hero-bg-mobile: var(--bg-hero) var(--hero-url-mobile) no-repeat right center;
+  --hero-bg-desktop: var(--bg-hero) var(--hero-url-desktop) no-repeat right center;
+  --bg-subscribe: var(--bg-hero) var(--url-subscribe) center;
+
+  /* FONT FAMILY */
+  --font-primary: 'Roboto', sans-serif;
+  --font-heading: 'Times New Roman', Times, serif;
+}

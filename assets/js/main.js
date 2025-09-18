@@ -1,38 +1,26 @@
-const btnMenuBar = document.getElementById('btnMenuBar');
-const menu = document.getElementById('menu');
+import menuBar from './components/btn-menubar.js';
+import backToTop from './components/btn-backtotop.js';
+import shadow from './components/shadow.js';
+import cards from './components/cards.js';
+import apiFetchProducts from './services/service-products.js';
+import blog from './components/blog.js';
+import apiFetchBlog from './services/service-blog.js';
+import copyRightYear from './components/copyrightYear.js';
 
-btnMenuBar.addEventListener('click', () => {
-  menu.classList.toggle('active');
-
-  const btnClose = document.getElementById('btnClose');
-
-  btnClose.addEventListener('click', () => {
-    menu.classList.remove('active');
+document.addEventListener('DOMContentLoaded', () => {
+  menuBar();
+  backToTop();
+  shadow();
+  
+  apiFetchProducts().then(data => {
+    if (data && data.products) {
+      cards(data.products);
+    }
   });
 
+  apiFetchBlog().then(data => {
+    blog(data);
+  });
+
+  copyRightYear();
 });
-
-document.addEventListener('click', (e) => {
-  if (!menu.contains(e.target) && !btnMenuBar.contains(e.target)) {
-    menu.classList.remove('active');
-  }
-});
-
-window.addEventListener('scroll', () => {
-  const header = document.querySelector('header');
-  
-  const viewportHaight = window.innerHeight - (7 * parseFloat(getComputedStyle(document.documentElement).fontSize));
-  
-  if (window.scrollY > viewportHaight) {
-    header.classList.add('shadow');
-  } else {
-    header.classList.remove('shadow');
-  }
-});
-
-const spanYear = document.getElementById('spanYear');
-const newDate = new Date();
-const year = newDate.getFullYear();
-spanYear.textContent = year;
-
-

@@ -1,28 +1,15 @@
-const containerCards = document.getElementById('cards');
+import variables from '../variables.js';
 
-const apiFetch = async () => {
-  try {
-    const response = await fetch('assets/js/api.json');
-    if (!response.ok) {
-      throw new Error(`Error HTTP: ${response.status}`);
-    }
-    
-    const data = await response.json();
-    return data;
+const cards = (cards) => {
+  const {productsCards} = variables();
 
-  } catch (error) {
-    console.error("Error al obtener los datos:", error);
-  }
-};
-
-const renderCards = (cards) => {
-  containerCards.innerHTML = '';
+  productsCards.innerHTML = '';
 
   cards.forEach(card => {
     const article = document.createElement('article');
     article.dataset.id = card.id;
     article.classList.add('card');
-    containerCards.appendChild(article);
+    productsCards.appendChild(article);
 
     if (card.discount != null) {
       const discounted = document.createElement('div');
@@ -68,8 +55,4 @@ const renderCards = (cards) => {
   });
 }
 
-apiFetch().then(data => {
-  if (data && data.products) {
-    renderCards(data.products);
-  }
-});
+export default cards;
