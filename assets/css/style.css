@@ -13,6 +13,10 @@
   background-color: var(--neutral-white);
 
   position: relative;
+
+  @media (min-width: 768px) {
+    grid-template-rows: 7rem auto 25rem;
+  }
   
   /*--------------------------------
     BOTON DE ARRIBA
