@@ -31,7 +31,7 @@
 <details>
 <summary>🖼️ <strong>Vista previa</strong></summary>
 
-![Diseño responsivo desktop](./assets/image/readme/PLants_%20Tienda%20Online%20de%20Plantas%20y%20Jardinería%20-%20Envío%20Gratis%20-%20desktop.jpeg)
+![Diseño responsivo desktop](./assets/image/readme/PLants%20_%20Tienda%20Online%20de%20Plantas%20y%20Jardinería%20-%20Envío%20Gratis%20-%20desktop.jpeg)
 
 </details>
 
@@ -57,5 +57,6 @@ git clone https://github.com/vernicadelvalles/webplants
 
 # 2️⃣ Entra en la carpeta
 cd plants-tienda
+
 
 # 3️⃣ Abre en tu navegador o usa un servidor local
