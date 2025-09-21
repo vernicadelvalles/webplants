@@ -2,13 +2,9 @@ import variables from '../variables.js';
 
 const shadow = () => {
   window.addEventListener('scroll', () => {
-    const {header, viewportHaight} = variables();
+    const {header} = variables();
     
-    if (window.scrollY > viewportHaight) {
-      header.classList.add('shadow');
-    } else {
-      header.classList.remove('shadow');
-    }
+    window.scrollY > 70 ? header.classList.add('shadow') : header.classList.remove('shadow');
   });
 }
 

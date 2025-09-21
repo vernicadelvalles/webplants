@@ -4,7 +4,6 @@ const variables = () => {
   const btnClose = document.getElementById('btnClose');
   const btnBackToTop = document.getElementById('btnBackToTop');
   const header = document.querySelector('header');
-  const viewportHaight = window.innerHeight - (7 * parseFloat(getComputedStyle(document.documentElement).fontSize));
   const productsCards = document.getElementById('productsCards');
   const blogs = document.getElementById('blogs');
   const spanYear = document.getElementById('spanYear');
@@ -15,7 +14,6 @@ const variables = () => {
     btnClose,
     btnBackToTop,
     header,
-    viewportHaight,
     productsCards, 
     blogs,
     spanYear

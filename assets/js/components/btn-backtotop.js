@@ -1,7 +1,7 @@
 import variables from '../variables.js';
 
 const backToTop = () => {
-  const {btnBackToTop, viewportHaight} = variables();
+  const {btnBackToTop} = variables();
 
   btnBackToTop.addEventListener('click', () => {
     window.scrollTo({
@@ -11,7 +11,7 @@ const backToTop = () => {
   });
   
   window.addEventListener('scroll', () => {
-    window.scrollY > viewportHaight ? btnBackToTop.classList.add('visible') : btnBackToTop.classList.remove('visible');
+    window.scrollY > 250 ? btnBackToTop.classList.add('visible') : btnBackToTop.classList.remove('visible');
   });
 }
 
